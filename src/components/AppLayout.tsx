@@ -74,8 +74,8 @@ export function AppLayout() {
           </nav>
         </aside>
 
-        {/* 右侧内容区：绝对定位撑满，高度链完整，子页面用 h-full 可继承 */}
-        <div className="absolute inset-0 left-[244px] overflow-hidden">
+        {/* 右侧内容区：绝对定位撑满；允许纵向滚动，避免子页面内容被 overflow-hidden 裁切无法滚动 */}
+        <div className="absolute inset-0 left-[244px] overflow-y-auto overflow-x-hidden">
           <Outlet />
         </div>
       </div>
